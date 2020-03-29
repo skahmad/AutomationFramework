@@ -22,5 +22,5 @@ public class App {
     public String getAppName() {
         return ClassUtils.getAppName(this.getClass());
     }
-    public String getTestName() { return ClassUtils.getTestName(this.getClass()); }
+    public String getTestClassName() { return ClassUtils.getTestClassName(this.getClass()); }
 }
