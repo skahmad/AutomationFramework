@@ -27,7 +27,6 @@ hs_err_pid*
 AutomationFramework.iml
 
 # Testing Module source file
-src/test
 
 # Target , generated output
 target
