@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public abstract class App {
     protected String rootUrl = "";
-    protected Browser browser;
+    protected static Browser browser;
     protected Reporter reporter;
     protected Configuration configuration;
 
@@ -29,11 +29,15 @@ public abstract class App {
     /**
      * Public Methods
      */
+    @Deprecated
+    @SuppressWarnings("feture use")
     public App setBrowser(Browser browser) {
         this.browser = browser;
         return this;
     }
 
+    @Deprecated
+    @SuppressWarnings("feture use")
     public App setReporter(Reporter reporter) {
         this.reporter = reporter;
         return this;
@@ -80,7 +84,11 @@ public abstract class App {
             e.printStackTrace();
         }
     }
-    
+
+    public static Browser getBrowser() {
+        return browser;
+    }
+
     public abstract void onTestEnd() throws Exception;
     public abstract void onTestStart() throws Exception;
     public abstract void onTestClassStart() throws Exception;
