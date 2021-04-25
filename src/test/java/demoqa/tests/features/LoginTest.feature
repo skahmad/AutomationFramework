@@ -8,6 +8,8 @@ Feature: Login Test
     Then validate login success "login successful"
     Then close the app
 
-
-
-  #Scenario: login with
+  Scenario: login with invalid username and password
+    Given open the app
+    Then login with username "apple" and password "banana"
+    Then validate login success "login successful"
+    Then close the app
